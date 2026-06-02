@@ -61,7 +61,7 @@ export default function LandingPage() {
       <nav className="nav-pill">
         <div style={{display:'flex',alignItems:'center',gap:12}}>
           <div style={{width:42,height:42,borderRadius:'50%',overflow:'hidden',border:'2px solid #C9960A',boxShadow:'0 3px 12px rgba(27,58,122,.25)',flexShrink:0}}>
-            <img src={LOGO} alt="Pahore Academy" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+            <img src="https://pncfshbflkmyjengdlyb.supabase.co/storage/v1/object/public/assets/WhatsApp%20Image%202026-05-09%20at%2011.43.04%20AM%20(2).jpeg" alt="Pahore Academy" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
           </div>
           <div>
             <div style={{fontFamily:'Playfair Display,serif',fontWeight:700,fontSize:15,color:'#1B3A7A',lineHeight:1.2}}>Pahore Academy</div>
