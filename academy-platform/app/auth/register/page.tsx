@@ -30,7 +30,7 @@ export default function RegisterPage() {
       <div style={{position:'relative',zIndex:1,width:'100%',maxWidth:420}}>
         <div style={{textAlign:'center',marginBottom:32}}>
           <Link href="/" style={{textDecoration:'none',display:'inline-flex',flexDirection:'column',alignItems:'center',gap:12}}>
-            <div style={{width:72,height:72,borderRadius:'50%',background:'rgba(255,255,255,.12)',backdropFilter:'blur(20px)',border:'2px solid rgba(255,255,255,.3)',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'Playfair Display,serif',fontSize:26,fontWeight:700,color:'#F5C842',boxShadow:'0 0 60px rgba(245,200,66,.2),0 12px 40px rgba(0,0,0,.25)'}}>PA</div>
+            <div style={{width:72,height:72,borderRadius:'50%',background:'rgba(255,255,255,.12)',backdropFilter:'blur(20px)',border:'2px solid rgba(255,255,255,.3)',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'Playfair Display,serif',fontSize:26,fontWeight:700,color:'#F5C842',boxShadow:'0 0 60px rgba(245,200,66,.2),0 12px 40px rgba(0,0,0,.25)'}}><img src='https://pncfshbflkmyjengdlyb.supabase.co/storage/v1/object/public/assets/WhatsApp%20Image%202026-05-09%20at%2011.43.04%20AM%20(2).jpeg' alt='Pahore Academy' style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'50%'}}/></div>
             <div>
               <div style={{fontFamily:'Playfair Display,serif',fontSize:22,fontWeight:700,color:'#FFFFFF'}}>Pahore Academy</div>
               <div style={{color:'rgba(255,255,255,.55)',fontSize:12}}>Mianwali</div>
