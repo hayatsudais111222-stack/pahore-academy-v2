@@ -12,6 +12,7 @@ const navMap: Record<string, {href:string;icon:string;label:string;color:string}
     {href:'/dashboard/student/library',       icon:'📚',label:'Library',      color:'#FFF5F5'},
     {href:'/dashboard/student/ai',            icon:'🤖',label:'AI Assistant', color:'#F5F3FF'},
     {href:'/dashboard/student/notifications', icon:'🔔',label:'Notifications',color:'#FFF8F0'},
+    {href:'/dashboard/student/attendance',     icon:'📋',label:'Attendance',    color:'#E6F4EA'},
   ],
   teacher:[
     {href:'/dashboard/teacher',               icon:'🏠',label:'Dashboard',    color:'#EEF2FF'},
@@ -20,6 +21,7 @@ const navMap: Record<string, {href:string;icon:string;label:string;color:string}
     {href:'/dashboard/teacher/reports',       icon:'📊',label:'Reports',      color:'#FFF5F5'},
     {href:'/dashboard/teacher/library',       icon:'📚',label:'Library',      color:'#F5F3FF'},
     {href:'/dashboard/teacher/ai-calculator', icon:'🤖',label:'AI Calculator',color:'#FFF8F0'},
+    {href:'/dashboard/teacher/attendance',     icon:'📋',label:'Attendance',    color:'#E6F4EA'},
   ],
   admin:[
     {href:'/dashboard/admin',                 icon:'🏠',label:'Dashboard',    color:'#EEF2FF'},
@@ -29,6 +31,7 @@ const navMap: Record<string, {href:string;icon:string;label:string;color:string}
     {href:'/dashboard/admin/library',         icon:'📚',label:'Library',      color:'#F5F3FF'},
     {href:'/dashboard/admin/codes',           icon:'🔐',label:'Access Codes', color:'#FFF8F0'},
     {href:'/dashboard/admin/export',          icon:'📤',label:'Export Data',  color:'#F0F4FF'},
+    {href:'/dashboard/admin/attendance',       icon:'📋',label:'Attendance',   color:'#E6F4EA'},
   ],
 }
 

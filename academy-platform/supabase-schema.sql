@@ -202,3 +202,38 @@ CREATE TRIGGER test_results_updated_at BEFORE UPDATE ON public.test_results
   FOR EACH ROW EXECUTE PROCEDURE update_updated_at();
 
 -- Done! Your Pahore Academy database is ready.
+
+-- ══════════════════════════════════════════════════════
+-- ATTENDANCE SYSTEM — Add these tables to your Supabase
+-- Go to SQL Editor and run this section
+-- ══════════════════════════════════════════════════════
+
+-- Attendance records table
+CREATE TABLE IF NOT EXISTS public.attendance (
+  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id       uuid REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  marked_by     uuid REFERENCES auth.users(id),
+  date          date NOT NULL DEFAULT CURRENT_DATE,
+  status        text CHECK (status IN ('present','absent','half_day','leave')) NOT NULL DEFAULT 'absent',
+  note          text,
+  user_type     text CHECK (user_type IN ('student','teacher')) NOT NULL,
+  class         text,
+  created_at    timestamptz DEFAULT now(),
+  updated_at    timestamptz DEFAULT now(),
+  UNIQUE(user_id, date)
+);
+
+-- Enable RLS
+ALTER TABLE public.attendance ENABLE ROW LEVEL SECURITY;
+
+-- Policies
+CREATE POLICY "attendance_read_all"   ON public.attendance FOR SELECT USING (auth.role() = 'authenticated');
+CREATE POLICY "attendance_insert_auth" ON public.attendance FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "attendance_update_auth" ON public.attendance FOR UPDATE USING (auth.role() = 'authenticated');
+CREATE POLICY "attendance_delete_auth" ON public.attendance FOR DELETE USING (auth.role() = 'authenticated');
+
+-- Index for fast queries
+CREATE INDEX IF NOT EXISTS attendance_user_date ON public.attendance(user_id, date);
+CREATE INDEX IF NOT EXISTS attendance_date ON public.attendance(date);
+CREATE INDEX IF NOT EXISTS attendance_class ON public.attendance(class);
+CREATE INDEX IF NOT EXISTS attendance_type ON public.attendance(user_type);
